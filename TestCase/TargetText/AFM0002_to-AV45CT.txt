@@ -1,0 +1,1 @@
+Age: 55; Gender: M; Scanner: Siemens; MFM: BioGraph 64; Modality: CT; Voxel size: (0.6, 0.6, 1.5); KPV(KV): 120.0; TC(mAs): 120.0

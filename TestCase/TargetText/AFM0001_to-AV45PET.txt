@@ -1,0 +1,1 @@
+Age: 70; Gender: F; Scanner: Siemens; MFM: Biograph 64; Modality: AV45 PET; Isotope: F18; Voxel size: (2.0, 2.0, 1.5); Dose(mC): 10.2

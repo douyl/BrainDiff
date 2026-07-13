@@ -1,0 +1,19 @@
+# Verified with Python 3.10 in conda env `hugface`.
+# Install PyTorch with a CUDA build matching your driver, e.g.:
+#   pip install torch==2.3.0 torchvision==0.18.0 --index-url https://download.pytorch.org/whl/cu118
+# Then install the remaining dependencies:
+#   pip install -r requirements.txt
+
+torch==2.3.0
+torchvision==0.18.0
+numpy==2.2.6
+scipy==1.14.1
+nibabel==5.3.2
+torchio==0.20.18
+PyYAML==6.0.2
+transformers==4.46.1
+einops==0.8.1
+einops-exts==0.0.4
+timm==1.0.19
+pytorch-lightning==2.3.0
+tqdm==4.66.6

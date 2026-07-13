@@ -1,0 +1,28 @@
+# ===================== data settings =====================
+image_size: [32, 24, 32]  # (D=256*8, H=192/8, W=256/8)
+volume_channels: 8
+condition_channels: 8
+prompt_dim: 768  # dimension of the prompt embedding
+prompt_load_from: 'pretrained_models/bert-base-uncased'
+prompt_max_length: 100
+# prompt_null_prob: 0.05
+# ===================== data settings =====================
+
+
+# ===================== model settings =====================
+timesteps: 1000  # training timesteps of the gaussian diffusion
+loss_type: 'l1'  # loss type of the gaussian diffusion
+model_dim: 72   # hidden size of the network
+dim_mults: [1, 1, 2, 4, 8]  # dimension of layers of the network
+use_attn: [0, 0, 0, 1, 1]
+AE_load_from: './checkpoints/Autoencoder_8x.ckpt'
+patch_size: 1  # actually this is the fake patch_size, real patch_size is 8
+num_dit: 1  # number of mid_DiT of the network
+vq_size: 64  # 8x downsampling by vae, and patch_size=8
+# ===================== model settings =====================
+
+
+
+
+
+

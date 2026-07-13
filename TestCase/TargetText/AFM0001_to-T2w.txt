@@ -1,0 +1,1 @@
+Age: 71; Gender: F; Scanner: 3.0 Siemens; Modality: T2w; Voxel size: (0.7, 0.7, 2.0); Imaging parameter TR(ms), TE(ms), TI(ms), and FA(degree): (6000.0, 117.0, None, 90.0)
