@@ -5,7 +5,7 @@ BrainDiff is accepted by the **6th Deep Generative Models Workshop @ MICCAI 2026
 This repository includes the inference code for **BrainDiff**, a unified latent diffusion framework for high-fidelity any-to-any brain modality synthesis.
 
 
-### [Paper](https://dgm4miccai.github.io) | [Code](.) | [Checkpoints](https://drive.google.com/drive/folders/1ZwjJA3MRFFwnjSLs3XpGzzh49ANPoQiX?usp=drive_link)
+### [Paper](https://dgm4miccai.github.io) | [Code](https://github.com/douyl/BrainDiff) | [Checkpoints](https://drive.google.com/drive/folders/1ZwjJA3MRFFwnjSLs3XpGzzh49ANPoQiX?usp=drive_link)
 
 ## Method Overview
 
