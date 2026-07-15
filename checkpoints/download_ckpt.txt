@@ -3,7 +3,7 @@ Download the BrainDiff checkpoints and place them in this directory.
 Placeholder links:
 
 Autoencoder_8x.ckpt
-https://example.com/braindiff/Autoencoder_8x.ckpt
+https://drive.google.com/file/d/1XdeRGr5L18ZcnaY2LQfItHrat2yHh_pr/view?usp=drive_link
 
 Text2Volume_0090500.pt
 https://example.com/braindiff/Text2Volume_0090500.pt

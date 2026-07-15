@@ -1,10 +1,11 @@
 # BrainDiff: A Unified Latent Diffusion for High-Fidelity Any-to-Any Brain Modality Synthesis
 
-This repository includes the inference code for **BrainDiff**, a unified latent diffusion framework for high-fidelity any-to-any brain modality synthesis.
-
 BrainDiff is accepted by the **6th Deep Generative Models Workshop @ MICCAI 2026 (DGM4MICCAI 2026)**.
 
-### Paper | Code | Checkpoints
+This repository includes the inference code for **BrainDiff**, a unified latent diffusion framework for high-fidelity any-to-any brain modality synthesis.
+
+
+### [Paper](https://dgm4miccai.github.io) | [Code](.) | [Checkpoints](https://drive.google.com/drive/folders/1ZwjJA3MRFFwnjSLs3XpGzzh49ANPoQiX?usp=drive_link)
 
 ## Method Overview
 
@@ -24,8 +25,8 @@ The code is organized as follows:
 * `infer_text2volume.py` generates a 3D volume from a text prompt.
 * `infer_textvolume2volume.py` generates a target modality from a source volume and a target prompt.
 * `configs/` contains inference configs for text-to-volume and text-volume-to-volume diffusion.
-* `checkpoints/` stores model weights. See `checkpoints/download_ckpt.txt`.
-* `pretrained_models/bert-base-uncased/` stores the BERT text encoder. See `pretrained_models/bert-base-uncased/download_bert.txt`.
+* `checkpoints/` stores model weights. See [`checkpoints/download_ckpt.txt`](checkpoints/download_ckpt.txt).
+* `pretrained_models/bert-base-uncased/` stores the BERT text encoder. See [`pretrained_models/bert-base-uncased/download_bert.txt`](pretrained_models/bert-base-uncased/download_bert.txt).
 * `TestCase/` contains example source volumes and text prompts.
 * `Results/` is the default output directory.
 
@@ -47,7 +48,7 @@ For CPU-only machines, install the CPU build of PyTorch from [pytorch.org](https
 
 ### Download Model Weights
 
-Download the model checkpoints according to `checkpoints/download_ckpt.txt` and place them as:
+Download the model checkpoints according to [`checkpoints/download_ckpt.txt`](checkpoints/download_ckpt.txt) and place them as:
 
 ```text
 checkpoints/
