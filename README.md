@@ -1,8 +1,8 @@
 # BrainDiff: A Unified Latent Diffusion for High-Fidelity Any-to-Any Brain Modality Synthesis
 
-BrainDiff is accepted by the **6th Deep Generative Models Workshop @ MICCAI 2026 (DGM4MICCAI 2026)**.
+BrainDiff has been accepted to the ***6th Deep Generative Models Workshop at MICCAI 2026 (DGM4MICCAI 2026)***.
 
-This repository includes the inference code for **BrainDiff**, a unified latent diffusion framework for high-fidelity any-to-any brain modality synthesis.
+This repository includes the inference code for **BrainDiff**.
 
 
 ### [Paper](https://dgm4miccai.github.io) | [Code](https://github.com/douyl/BrainDiff) | [Checkpoints](https://drive.google.com/drive/folders/1ZwjJA3MRFFwnjSLs3XpGzzh49ANPoQiX?usp=drive_link)
@@ -11,9 +11,11 @@ This repository includes the inference code for **BrainDiff**, a unified latent 
 
 BrainDiff generates 3D brain volumes in a shared 8x VAE latent space. It supports:
 
-* text-to-volume synthesis from acquisition descriptions;
-* text-and-volume-conditioned translation with a source brain volume as structural guidance;
 * VAE reconstruction for checking the latent representation.
+* text-to-volume synthesis from acquisition descriptions.
+* source-volume-guided text-to-volume synthesis with a source brain volume as structural guidance.
+
+![BrainDiff pipeline](pipeline.png)
 
 All scripts read and write NIfTI (`.nii.gz`) files. Results are saved under `Results/`.
 
@@ -23,8 +25,8 @@ The code is organized as follows:
 
 * `infer_autoencoder.py` runs VAE encoding and reconstruction.
 * `infer_text2volume.py` generates a 3D volume from a text prompt.
-* `infer_textvolume2volume.py` generates a target modality from a source volume and a target prompt.
-* `configs/` contains inference configs for text-to-volume and text-volume-to-volume diffusion.
+* `infer_textvolume2volume.py` runs source-volume-guided text-to-volume synthesis.
+* `configs/` contains inference configs for text-to-volume and source-volume-guided text-to-volume diffusion.
 * `checkpoints/` stores model weights. See [`checkpoints/download_ckpt.txt`](checkpoints/download_ckpt.txt).
 * `pretrained_models/bert-base-uncased/` stores the BERT text encoder. See [`pretrained_models/bert-base-uncased/download_bert.txt`](pretrained_models/bert-base-uncased/download_bert.txt).
 * `TestCase/` contains example source volumes and text prompts.
@@ -84,7 +86,7 @@ Run text-to-volume generation:
 python infer_text2volume.py TestCase/TargetText/OAS30001_to-FLAIR.txt
 ```
 
-Run source-volume-and-text-conditioned translation:
+Run source-volume-guided text-to-volume synthesis:
 
 ```bash
 python infer_textvolume2volume.py \
@@ -106,7 +108,7 @@ Diffusion models operate in VAE latent space with shape `(C, D, H, W) = (8, 32, 
 | --- | --- | --- |
 | VAE (8x) | `checkpoints/Autoencoder_8x.ckpt` | - |
 | Text2Volume | `checkpoints/Text2Volume_0090500.pt` | `configs/Text2Volume.yaml` |
-| TextVolume2Volume | `checkpoints/TextVolume2Volume_0229000.pt` | `configs/TextVolume2Volume.yaml` |
+| Source-volume-guided Text2Volume | `checkpoints/TextVolume2Volume_0229000.pt` | `configs/TextVolume2Volume.yaml` |
 | BERT text encoder | `pretrained_models/bert-base-uncased/` | - |
 
 `infer_textvolume2volume.py` additionally loads the Text2Volume base weights from `checkpoints/Text2Volume_0090500.pt` through `--basemodel_load_from`.
