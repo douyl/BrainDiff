@@ -66,7 +66,7 @@ git clone https://huggingface.co/google-bert/bert-base-uncased pretrained_models
 
 ### Prepare Data
 
-Example prompts are provided in `TestCase/TargetText/`, and full prompt collections are in `TestCase/[All]Prompt/`. Source volumes for Huashan examples are under `TestCase/Huashan/{T1w,T2w,FLAIR,CT,AV45-PET}/`.
+Example prompts are provided in `TestCase/TargetText/`. Source volumes for Huashan examples are under `TestCase/Huashan/{T1w,T2w,FLAIR,CT,AV45-PET}/`.
 
 Target text files should describe the desired modality and acquisition parameters, such as scanner, TR/TE/TI/FA for MRI, kVp/mAs for CT, or isotope/dose for PET.
 
@@ -107,7 +107,7 @@ Diffusion models operate in VAE latent space with shape `(C, D, H, W) = (8, 32, 
 | VAE (8x) | `checkpoints/Autoencoder_8x.ckpt` | - |
 | Text2Volume | `checkpoints/Text2Volume_0090500.pt` | `configs/Text2Volume.yaml` |
 | TextVolume2Volume | `checkpoints/TextVolume2Volume_0229000.pt` | `configs/TextVolume2Volume.yaml` |
-| BERT text encoder | `pretrained_models/bert-base-uncased/` | `configs/*.yaml` |
+| BERT text encoder | `pretrained_models/bert-base-uncased/` | - |
 
 `infer_textvolume2volume.py` additionally loads the Text2Volume base weights from `checkpoints/Text2Volume_0090500.pt` through `--basemodel_load_from`.
 
@@ -127,10 +127,11 @@ Common options:
 If our code or models help your work, please cite our paper:
 
 ```bibtex
-@inproceedings{BrainDiff_2026_DGM4MICCAI,
-  author    = {Yulong Dou and Zhiming Cui and Dinggang Shen},
-  title     = {A Unified Latent Diffusion for High-Fidelity Any-to-Any Brain Modality Synthesis},
-  booktitle = {6th Deep Generative Models Workshop @ MICCAI 2026},
-  year      = {2026}
+@inproceedings{dou2026unified,
+  title={A Unified Latent Diffusion for High-Fidelity Any-to-Any Brain Modality Synthesis},
+  author={Dou, Yulong and Chen, Guo and Xu, Chenfan and Wang, Yulin and Xu, Zhe and Cui, Zhiming and Shen, Dinggang},
+  booktitle={MICCAI Workshop on Deep Generative Models},
+  year={2026},
+  organization={Springer}
 }
 ```

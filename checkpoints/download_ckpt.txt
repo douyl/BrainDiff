@@ -1,12 +1,12 @@
 Download the BrainDiff checkpoints and place them in this directory.
 
-Placeholder links:
+Google Drive Links:
 
 Autoencoder_8x.ckpt
 https://drive.google.com/file/d/1XdeRGr5L18ZcnaY2LQfItHrat2yHh_pr/view?usp=drive_link
 
 Text2Volume_0090500.pt
-https://example.com/braindiff/Text2Volume_0090500.pt
+https://drive.google.com/file/d/1TfEKd9s59f3sJJ8_IhFE6ZazAKVJygtB/view?usp=drive_link
 
 TextVolume2Volume_0229000.pt
-https://example.com/braindiff/TextVolume2Volume_0229000.pt
+https://drive.google.com/file/d/1EJWzQ11aGPx7jjDcKCcPFZXWRRsuqwJm/view?usp=drive_link

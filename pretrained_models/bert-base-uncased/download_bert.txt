@@ -6,5 +6,3 @@ Example:
 
 git lfs install
 git clone https://huggingface.co/google-bert/bert-base-uncased pretrained_models/bert-base-uncased
-
-Note: the prompt_embedding directory found in some internal copies is a cache of prompt embeddings and is not required by the current inference scripts.
