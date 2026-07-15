@@ -15,7 +15,7 @@ BrainDiff generates 3D brain volumes in a shared 8x VAE latent space. It support
 * text-to-volume synthesis from acquisition descriptions.
 * source-volume-guided text-to-volume synthesis with a source brain volume as structural guidance.
 
-![BrainDiff pipeline](pipeline.png)
+<img src="pipeline.png" alt="BrainDiff pipeline" width="700">
 
 All scripts read and write NIfTI (`.nii.gz`) files. Results are saved under `Results/`.
 
