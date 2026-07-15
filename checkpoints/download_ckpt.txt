@@ -1,0 +1,12 @@
+Download the BrainDiff checkpoints and place them in this directory.
+
+Placeholder links:
+
+Autoencoder_8x.ckpt
+https://example.com/braindiff/Autoencoder_8x.ckpt
+
+Text2Volume_0090500.pt
+https://example.com/braindiff/Text2Volume_0090500.pt
+
+TextVolume2Volume_0229000.pt
+https://example.com/braindiff/TextVolume2Volume_0229000.pt
